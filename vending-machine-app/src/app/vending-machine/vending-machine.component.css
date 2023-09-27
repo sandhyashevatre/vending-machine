@@ -1,0 +1,103 @@
+
+ .vending-machine {
+        width: 600px; /* Reduce the width */
+        background-color: #fff;
+        border: 5px solid #30f81e;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 3px 3px 5px #ac5858;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: inline-block;
+        height: 100vh;
+    }
+    
+.vending-machine-header {
+    text-align: center;
+    font-size: 20px;
+}
+.vending-machine-controls {
+    text-align: center;
+    margin: 10px 0;
+}
+.vending-machine-display {
+    background-color: #bcf4a2;
+    padding: 10px;
+    border: 2px solid #30b6eb;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.vending-machine-bill {
+    text-align: center;
+    margin: 10px 0;
+}
+.vending-machine-door {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.vending-machine-door button {
+    background-color: #dc490f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+.vending-machine-controls button,
+.vending-machine-display button {
+    background-color: #534caf; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    cursor: pointer; 
+    font-size: 16px; 
+    margin: 5px; 
+    border-radius: 5px; 
+}
+.vending-machine-controls button:hover,
+.vending-machine-display button:hover,
+.vending-machine-door button:hover {
+    background-color: #45a049; 
+}
+/* CSS for Vending Machine Table */
+/* CSS for Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust the minmax value as needed */
+    grid-gap: 20px;
+}
+
+/* CSS for Product Box */
+.product-box {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px #aaa;
+    display: flex;
+    flex-direction: column;
+}
+
+/* CSS for Product Image (if available) */
+.product-image img {
+    max-width: 100%; 
+    height: auto;
+}
+
+/* CSS for Product Details */
+.product-details {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.product-details p {
+    margin: 5px 0;
+}
+
+.product-details strong {
+    font-weight: bold;
+}
+
+

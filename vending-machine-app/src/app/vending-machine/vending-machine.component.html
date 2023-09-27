@@ -1,0 +1,44 @@
+<!-- Add CSS class for vending machine container -->
+<div class="vending-machine">
+    <div class="vending-machine-header">
+        <h2>Vending Machine</h2>
+    </div>
+    <div class="vending-machine-products">
+        <h3>All Products:</h3>
+        <div class="product-grid">
+            <div *ngFor="let product of allProducts" class="product-box">
+                <!-- Add an image element if you have images for products -->
+                <div class="product-image">
+                    <img src="assets/images/chips.jpg" alt= "{{ product.name }}" width="50" height="50">
+                </div>
+                <div class="product-details">
+                    <p><strong>Product ID:</strong> {{ product.id }}</p>
+                    <p><strong>Product Name:</strong> {{ product.name }}</p>
+                    <p><strong>Quantity:</strong> {{ product.quantity }}</p>
+                    <p><strong>Price (₹):</strong> {{ product.price }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="vending-machine-controls">
+        <input [(ngModel)]="inputText" placeholder="Enter product ID" />
+        <button (click)="selectProduct()">Select</button>
+    </div>
+
+    <div class="vending-machine-display">
+        <div *ngIf="selectedProduct">
+            <h3>Selected Product: {{ selectedProduct.name }}</h3>
+            <p>Price: ₹{{ selectedProduct.price }}</p>
+            <input [(ngModel)]="selectedQuantity" type="number" min="1" max="{{ selectedProduct.quantity }}" />
+            <button (click)="purchaseProduct()">Purchase</button>
+        </div>
+    </div>
+
+    <div class="vending-machine-bill">
+        <h3>Bill: ₹{{ bill.toFixed(2) }}</h3>
+    </div>
+    <div class="vending-machine-door">
+        <button (click)="toggleDoor()">{{doorButtonText}}</button>
+    </div>
+
+</div>
